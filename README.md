@@ -1,13 +1,15 @@
-# tor-privoxy-alpine
+# tor-privoxy-polipo
 
-The smallest (**15 MB**) docker image with Tor and Privoxy on Alpine Linux.
+The smallest (**16 MB**) docker image with Tor, Privoxy and Polipo on Alpine Linux.
 
 ```
-docker run -d -p 8118:8118 -p 9050:9050 rdsubhas/tor-privoxy-alpine
+docker run -d -p 8118:8118 -p 9050:9050 -p 8123:8123 simonpure/tor-privoxy-polipo
 curl --proxy localhost:8118 https://www.google.com
 ```
 
-And that's it! Read the accompanying [blog post](https://medium.com/@rdsubhas/docker-image-with-tor-privoxy-and-a-process-manager-under-15-mb-c9e344111b61) for more details.
+## Thanks
+
+Based on https://github.com/rdsubhas/docker-tor-privoxy-alpine
 
 ## Known Issues
 
